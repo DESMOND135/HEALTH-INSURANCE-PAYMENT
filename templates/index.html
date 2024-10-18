@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- Make it compatible to mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>HEALTH INSURANCE PREDICTION</title>
+  
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+	<h1 style="color:Violet;">HEALTH INSURANCE PREDICTION</h1>
+
+     <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+    <form action="{{ url_for('predict')}}"method="post">
+      
+    	<input type="text" name="age" placeholder="age" required="required" /><br>
+      <input type="text" name="sex" placeholder="sex" required="required" /><br>
+      <input type="text" name="bmi" placeholder="bmi" required="required" /><p>
+      <input type="text" name="smoker" placeholder="smoker" required="required" /><p>
+      <input type="text" name="region" placeholder="region" required="required" /><p>
+      <input type="text" name="children" placeholder="children" required="required" /><p>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">HEALTH INSURANCE PAYMENTS</button></p>
+    </form>
+
+   <br>
+   <br>
+   <h4 style="color:Violet;">
+   {{ prediction_text }} </h4>
+
+ </div>
+
+
+</body>
+</html>
